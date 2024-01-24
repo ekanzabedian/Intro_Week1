@@ -18,14 +18,34 @@ While the addresses for all files and folders can be written with paths that sta
 > If your current working directory is `/Users/UserName/`, write the absolute paths for the 
 > directories referenced by the following relative paths.
 >
-> `Desktop`
+> `Desktop`=> pathway would be /User/username/desktop
+>>> this is an absolute pathway since it does not begin with '/' 
+
+> `../Guest/` = '..' = parent folder of the directory currently working in so the absolute pathway would be /User/Guest
+>>> this is a relative pathway since it starts with '/'
+
+> `~/Library/`= '~' is a trick the '~' has a '/' built in so this is an absolute pathway. The pathway would just be /Library/
 >
-> `../Guest/`
->
-> `~/Library/`
->
-> `../../`
+> `../../` = we are already in /user/username so going back to the parent directory 2x would just put us at the root filesystem??
   
 ## Hidden Files and Folders
 
 In Unix-based filesystems, you can keep some files and folders from showing up by default if you add a period, `.`, to the beginning of their names. These files are hidden. One common use for hidden files is to specify configuration settings for a program or system. These hidden files are usually stored in a user's home directory (e.g., `/Users/UserName/`). They can be revealed by listing a directory's contents using the `-a` flag - `ls -a`.
+
+#
+Class Notes/Commands
+
+'ls a' - shows entire directory contents 
+
+'cat' - opens txt file but cannot edit
+> so in order to open the content of the files you first do 'ls -a" find the file you want on the catalog and then type 'cat [INSERT FILE NAME]' and then you can open the file damn thats crazy...
+
+Theres also permissions codes that have a series of 10 numbers which are a series of dashes and letters
+
+These permissions can look like a range of different codes but they all have the '-' and the three letters'd''r''x''w' in common
+
+> 'd' usually indicates that it is a directory
+> '-' indicates that it is a file within the directory
+>'r' who has permission to read the file
+>'x' who has permission to execute the file
+>'w' who can edit the file 
